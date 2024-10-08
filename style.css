@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+
+.calculator {
+  min-width: 400px;
+  max-width: 40%;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
