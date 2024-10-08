@@ -17,6 +17,7 @@
 .output {
   height: 120px;
   background-color: gray;
+  border: 1px solid black;
 }
 
 .buttons {
