@@ -16,8 +16,12 @@
 
 .output {
   height: 120px;
-  background-color: gray;
+  background-color: rgb(161, 159, 159);
   border: 1px solid black;
+  padding: 10px;
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: 600;
 }
 
 .buttons {
