@@ -6,12 +6,17 @@
 
 
 .calculator {
-  min-width: 400px;
-  max-width: 40%;
+  min-width: 350px;
+  max-width: 500px;
   margin: 0 auto;
   border: 2px solid black;
   border-radius: 10px;
   padding: 5px;
+}
+
+.output {
+  height: 120px;
+  background-color: gray;
 }
 
 .buttons {
