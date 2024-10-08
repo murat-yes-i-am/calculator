@@ -3,10 +3,10 @@ const operationButtons = document.querySelectorAll('.button.operation');
 const auxiliaryButtons = document.querySelectorAll('.button.auxiliary');
 const outputElement = document.querySelector('.button.output');
 
-let firstOperand = 0;
-let secondOperand;
+let firstOperand = '0';
+let secondOperand = null;
 let isDotUsed = false;
-let operator;
+let operator = null;
 
 const add = (a, b) => a + b;
 const subtract = (a, b) => a - b;
@@ -24,4 +24,12 @@ const operate = (operand1, operator, operand2) => {
     case '/':
       return divide(operand1, operand2);
   }
+}
+
+const clear = () => {
+  firstOperand = '0';
+  secondOperand = null;
+  operator = null;
+  isDotUsed = false;
+  outputElement.textContent = firstOperand;
 }
