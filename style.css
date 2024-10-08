@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 
-
 .calculator {
-  min-width: 350px;
+  min-width: 400px;
   max-width: 500px;
   margin: 0 auto;
   border: 2px solid black;
   border-radius: 10px;
   padding: 5px;
+  --button-width: calc((100% - 10px) / 4);
 }
 
 .output {
@@ -22,10 +22,12 @@
 .buttons {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .button {
   padding: 20px;
-  width: 100px;
-  height: 100px;
+  width: var(--button-width);
+  height: var(--button-height);
+  font-size: 36px;
 }
