@@ -1,4 +1,5 @@
-const numberPartButtons = document.querySelectorAll('.button.number-part');
+const digitButtons = document.querySelectorAll('.button.digit');
+const dotButton = document.getElementById('dot');
 const operationButtons = document.querySelectorAll('.button.operation');
 
 const auxiliaryButtons = {
