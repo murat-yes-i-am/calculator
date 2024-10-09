@@ -76,6 +76,7 @@ const readDotInput = () => {
     }
 
     isDotUsed = true;
+    showInput();
   }
 }
 
