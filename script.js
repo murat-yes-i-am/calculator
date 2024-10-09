@@ -40,7 +40,7 @@ const operate = (operand1, operator, operand2) => {
 
 const clear = () => {
   firstOperand = '0';
-  secondOperand = null;
+  secondOperand = '';
   operator = null;
   isDotUsed = false;
   outputElement.textContent = firstOperand;
@@ -86,7 +86,10 @@ const readOperator = (e) => {
 
 const calculate = () => {
   if (firstOperand && operator && secondOperand) {
-    firstOperand = operate(firstOperand, operator, secondOperand);
+    const operand1 = Number(firstOperand);
+    const operand2 = Number(secondOperand);
+    
+    firstOperand = operate(operand1, operator, operand2);
     secondOperand = '';
     operator = null;
 
