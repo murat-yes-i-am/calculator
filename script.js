@@ -41,7 +41,7 @@ const operate = (operand1, operator, operand2) => {
 }
 
 const clear = () => {
-  reset()
+  reset();
   outputElement.textContent = firstOperand;
 }
 
@@ -108,16 +108,18 @@ const calculate = () => {
   }
 }
 
-for (const button of digitButtons) {
-  button.addEventListener('click', readNumberInput);
-}
-
-dotButton.addEventListener('click', readDotInput);
-
-for (const button in operatorUI) {
-  operatorUI[button].addEventListener('click', readOperator);
-}
-
-equalsButton.addEventListener('click', calculate);
-
-auxiliary.clearButton.addEventListener('click', clear);
+(function addEventListeners() {
+  for (const button of digitButtons) {
+    button.addEventListener('click', readNumberInput);
+  }
+  
+  dotButton.addEventListener('click', readDotInput);
+  
+  for (const button in operatorUI) {
+    operatorUI[button].addEventListener('click', readOperator);
+  }
+  
+  equalsButton.addEventListener('click', calculate);
+  
+  auxiliary.clearButton.addEventListener('click', clear);
+})();
