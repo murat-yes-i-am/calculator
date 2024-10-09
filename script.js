@@ -84,6 +84,12 @@ const readOperator = (e) => {
   console.log(operator);
 }
 
+const calculate = () => {
+  if (firstOperand && operator && secondOperand) {
+    firstOperand = operate(firstOperand, operator, secondOperand);
+  }
+}
+
 for (const button of digitButtons) {
   button.addEventListener('click', readNumberInput);
 }
