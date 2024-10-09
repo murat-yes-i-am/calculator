@@ -70,6 +70,10 @@ const readNumberInput = (e) => {
 const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
+  if (operator) {
+    calculate();
+  }
+
   operator = enteredOperator;
 
   console.log(operator);
