@@ -1,6 +1,6 @@
 const digitButtons = [...document.querySelectorAll('.button.digit')];
 const dotButton = document.getElementById('dot');
-const operationButtons = document.querySelectorAll('.button.operation');
+const operationButtons = [...document.querySelectorAll('.button.operation')];
 
 const auxiliaryButtons = {
   clear: document.getElementById('clear'),
