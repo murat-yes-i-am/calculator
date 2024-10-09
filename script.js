@@ -106,6 +106,8 @@ for (const button of digitButtons) {
   button.addEventListener('click', readNumberInput);
 }
 
+dotButton.addEventListener('click', readDotInput);
+
 for (const button in operatorUI) {
   operatorUI[button].addEventListener('click', readOperator);
 }
