@@ -7,7 +7,7 @@ const auxiliaryButtons = {
   changeSign: document.getElementById('percent'),
   percent: document.getElementById('change-sign'),
 }
-const outputElement = document.querySelector('.button.output');
+const outputElement = document.querySelector('.output');
 
 let firstOperand = '0';
 let secondOperand = null;
