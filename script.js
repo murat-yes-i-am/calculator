@@ -1,11 +1,16 @@
 const digitButtons = [...document.querySelectorAll('.button.digit')];
 const dotButton = document.getElementById('dot');
-const operatorButtons = [...document.querySelectorAll('.button.operator')];
+const operatorUI = {
+  addButton: document.getElementById('add'),
+  subtractButton: document.getElementById('subtract'),
+  multiplyButton: document.getElementById('multiply'),
+  divideButton: document.getElementById('divide'),
+};
 
-const auxiliaryButtons = {
-  clear: document.getElementById('clear'),
-  changeSign: document.getElementById('percent'),
-  percent: document.getElementById('change-sign'),
+const auxiliary = {
+  clearButton: document.getElementById('clear'),
+  changeSignButton: document.getElementById('percent'),
+  percentButton: document.getElementById('change-sign'),
 }
 const outputElement = document.querySelector('.output');
 
@@ -82,8 +87,8 @@ for (const button of digitButtons) {
   button.addEventListener('click', readNumberInput);
 }
 
-for (const button of operatorButtons) {
-  button.addEventListener('click', readOperator);
+for (const button in operatorUI) {
+  operatorUI[button].addEventListener('click', readOperator);
 }
 
-auxiliaryButtons.clear.addEventListener('click', clear);
+auxiliary.clearButton.addEventListener('click', clear);
