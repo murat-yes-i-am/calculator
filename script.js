@@ -80,4 +80,8 @@ for (const button of digitButtons) {
   button.addEventListener('click', readNumberInput);
 }
 
+for (const button of operatorButtons) {
+  button.addEventListener('click', readOperator);
+}
+
 auxiliaryButtons.clear.addEventListener('click', clear);
