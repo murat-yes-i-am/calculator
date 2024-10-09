@@ -45,7 +45,7 @@ const clear = () => {
   outputElement.textContent = firstOperand;
 }
 
-const fullFillOperand = (operand, digit) => {
+const appendOperand = (operand, digit) => {
   if (operand !== 0) {
     return operand + digit;
   } else {
@@ -63,9 +63,9 @@ const readNumberInput = (e) => {
   const enteredDigit = e.target.textContent;
 
   if (!operator) {
-    firstOperand = fullFillOperand(firstOperand, enteredDigit);
+    firstOperand = appendOperand(firstOperand, enteredDigit);
   } else {
-    secondOperand = fullFillOperand(secondOperand, enteredDigit);
+    secondOperand = appendOperand(secondOperand, enteredDigit);
   }
 
   showInput();
