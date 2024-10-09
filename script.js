@@ -39,3 +39,6 @@ const clear = () => {
   isDotUsed = false;
   outputElement.textContent = firstOperand;
 }
+
+
+auxiliaryButtons.clear.addEventListener('click', clear);
