@@ -70,6 +70,12 @@ const readNumberInput = (e) => {
   showInput();
 }
 
+const readOperator = (e) => {
+  const enteredOperator = e.target.textContent;
+
+  operator = enteredOperator;
+}
+
 for (const button of digitButtons) {
   button.addEventListener('click', readNumberInput);
 }
