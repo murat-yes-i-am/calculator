@@ -88,6 +88,7 @@ const readOperator = (e) => {
   }
 
   operator = enteredOperator;
+  isDotUsed = false;
 }
 
 const calculate = () => {
