@@ -6,6 +6,7 @@ const operatorUI = {
   multiplyButton: document.getElementById('multiply'),
   divideButton: document.getElementById('divide'),
 };
+const equalsButton = document.getElementById('equals');
 
 const auxiliary = {
   clearButton: document.getElementById('clear'),
