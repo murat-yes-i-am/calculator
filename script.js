@@ -60,9 +60,18 @@ const showInput = () => {
  */
 const readNumberInput = (e) => {
   const enteredDigit = e.target.textContent;
-  const operand = operator ? secondOperand : firstOperand;
-  const updatedOperand = fullFillOperand(operand, enteredDigit);
+
+  if (!operator) {
+    firstOperand = fullFillOperand(firstOperand, enteredDigit);
+  } else {
+    secondOperand = firstOperand(secondOperand, enteredDigit);
+  }
+
   showInput();
+}
+
+for (const button of digitButtons) {
+  button.addEventListener('click', readNumberInput);
 }
 
 auxiliaryButtons.clear.addEventListener('click', clear);
