@@ -64,7 +64,7 @@ const readNumberInput = (e) => {
   if (!operator) {
     firstOperand = fullFillOperand(firstOperand, enteredDigit);
   } else {
-    secondOperand = firstOperand(secondOperand, enteredDigit);
+    secondOperand = fullFillOperand(secondOperand, enteredDigit);
   }
 
   showInput();
@@ -74,6 +74,8 @@ const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
   operator = enteredOperator;
+
+  console.log(operator);
 }
 
 for (const button of digitButtons) {
