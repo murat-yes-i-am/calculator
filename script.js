@@ -87,6 +87,10 @@ const readOperator = (e) => {
 const calculate = () => {
   if (firstOperand && operator && secondOperand) {
     firstOperand = operate(firstOperand, operator, secondOperand);
+    secondOperand = '';
+    operator = null;
+    
+    showInput();
   }
 }
 
