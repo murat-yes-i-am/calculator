@@ -98,4 +98,6 @@ for (const button in operatorUI) {
   operatorUI[button].addEventListener('click', readOperator);
 }
 
+equalsButton.addEventListener('click', calculate);
+
 auxiliary.clearButton.addEventListener('click', clear);
