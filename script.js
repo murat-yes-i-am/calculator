@@ -55,10 +55,6 @@ const showInput = () => {
   outputElement.textContent = operandToShow;
 }
 
-/**
- * 
- * @param {MouseEvent} e 
- */
 const readNumberInput = (e) => {
   const enteredDigit = e.target.textContent;
 
