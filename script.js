@@ -1,6 +1,11 @@
 const numberPartButtons = document.querySelectorAll('.button.number-part');
 const operationButtons = document.querySelectorAll('.button.operation');
-const auxiliaryButtons = document.querySelectorAll('.button.auxiliary');
+
+const auxiliaryButtons = {
+  clear: document.getElementById('clear'),
+  changeSign: document.getElementById('percent'),
+  percent: document.getElementById('change-sign'),
+}
 const outputElement = document.querySelector('.button.output');
 
 let firstOperand = '0';
