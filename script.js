@@ -67,6 +67,18 @@ const readNumberInput = (e) => {
   showInput();
 }
 
+const readDotInput = () => {
+  if (!isDotUsed) {
+    if (!operator) {
+      firstOperand = firstOperand + '.';
+    } else {
+      secondOperand = secondOperand + '.';
+    }
+
+    isDotUsed = true;
+  }
+}
+
 const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
