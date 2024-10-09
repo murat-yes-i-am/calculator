@@ -16,7 +16,7 @@ const auxiliary = {
 const outputElement = document.querySelector('.output');
 
 let firstOperand = '0';
-let secondOperand = null;
+let secondOperand = '';
 let isDotUsed = false;
 let operator = null;
 
@@ -89,7 +89,7 @@ const calculate = () => {
     firstOperand = operate(firstOperand, operator, secondOperand);
     secondOperand = '';
     operator = null;
-    
+
     showInput();
   }
 }
