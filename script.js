@@ -15,10 +15,17 @@ const auxiliary = {
 }
 const outputElement = document.querySelector('.output');
 
-let firstOperand = '0';
-let secondOperand = '';
-let isDotUsed = false;
+let firstOperand = 0;
+let secondOperand = 0;
 let operator = null;
+let isDotUsed = false;
+
+const reset = () => {
+  firstOperand = 0;
+  secondOperand = 0;
+  operator = null;
+  isDotUsed = false;
+}
 
 const operate = (operand1, operator, operand2) => {
   switch (operator) {
@@ -34,10 +41,7 @@ const operate = (operand1, operator, operand2) => {
 }
 
 const clear = () => {
-  firstOperand = '0';
-  secondOperand = '';
-  operator = null;
-  isDotUsed = false;
+  reset()
   outputElement.textContent = firstOperand;
 }
 
