@@ -46,7 +46,7 @@ const clear = () => {
 }
 
 const fullFillOperand = (operand, digit) => {
-  if (operand != '0') {
+  if (operand !== 0) {
     return operand + digit;
   } else {
     return digit !== '0' ? digit : operand;
@@ -101,7 +101,7 @@ const calculate = () => {
     const operand2 = Number(secondOperand);
 
     firstOperand = operate(operand1, operator, operand2);
-    secondOperand = '';
+    secondOperand = 0;
     operator = null;
 
     showInput();
