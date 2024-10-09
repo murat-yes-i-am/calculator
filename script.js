@@ -1,4 +1,4 @@
-const digitButtons = document.querySelectorAll('.button.digit');
+const digitButtons = [...document.querySelectorAll('.button.digit')];
 const dotButton = document.getElementById('dot');
 const operationButtons = document.querySelectorAll('.button.operation');
 
