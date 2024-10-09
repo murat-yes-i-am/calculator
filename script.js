@@ -75,8 +75,6 @@ const readOperator = (e) => {
   }
 
   operator = enteredOperator;
-
-  console.log(operator);
 }
 
 const calculate = () => {
