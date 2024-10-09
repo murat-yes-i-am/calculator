@@ -1,5 +1,4 @@
-const digitButtons = [...document.querySelectorAll('.button.digit')];
-const dotButton = document.getElementById('dot');
+const numberPartButtons = [...document.querySelectorAll('.button.number-part')];
 const operatorUI = {
   addButton: document.getElementById('add'),
   subtractButton: document.getElementById('subtract'),
@@ -45,11 +44,11 @@ const clear = () => {
   outputElement.textContent = firstOperand;
 }
 
-const appendOperand = (operand, digit) => {
-  if (operand !== 0) {
-    return operand + digit;
+const getAppendedOperand = (operand, part) => {
+  if (operand !== 0 || part === '.') {
+    return operand + part;
   } else {
-    return digit !== '0' ? digit : operand;
+    return part !== '0' ? part : operand;
   }
 }
 
@@ -59,27 +58,19 @@ const showInput = () => {
   outputElement.textContent = operandToShow;
 }
 
-const readNumberInput = (e) => {
-  const enteredDigit = e.target.textContent;
+const readNumberPartInput = (e) => {
+  const enteredPart = e.target.textContent;
+  const isDot = enteredPart === '.';
+  const isDigit = !isDot;
 
-  if (!operator) {
-    firstOperand = appendOperand(firstOperand, enteredDigit);
-  } else {
-    secondOperand = appendOperand(secondOperand, enteredDigit);
-  }
-
-  showInput();
-}
-
-const readDotInput = () => {
-  if (!isDotUsed) {
+  if ((isDot && !isDotUsed) || isDigit) {
     if (!operator) {
-      firstOperand = firstOperand + '.';
+      firstOperand = getAppendedOperand(firstOperand, enteredPart);
     } else {
-      secondOperand = secondOperand + '.';
+      secondOperand = getAppendedOperand(secondOperand, enteredPart);
     }
 
-    isDotUsed = true;
+    isDotUsed = isDot;
     showInput();
   }
 }
@@ -109,11 +100,9 @@ const calculate = () => {
 }
 
 (function addEventListeners() {
-  for (const button of digitButtons) {
-    button.addEventListener('click', readNumberInput);
+  for (const button of numberPartButtons) {
+    button.addEventListener('click', readNumberPartInput);
   }
-  
-  dotButton.addEventListener('click', readDotInput);
   
   for (const button in operatorUI) {
     operatorUI[button].addEventListener('click', readOperator);
