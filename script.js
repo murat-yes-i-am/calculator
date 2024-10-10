@@ -67,6 +67,10 @@ const readNumberPartInput = (e) => {
   const isDot = enteredPart === '.';
   const isDigit = !isDot;
 
+  if (result && !operator) {
+    result = null;
+  }
+
   if ((isDot && !isDotUsed) || isDigit) {
     if (!operator) {
       firstOperand = getAppendedOperand(firstOperand, enteredPart);
