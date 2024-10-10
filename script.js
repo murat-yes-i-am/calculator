@@ -43,7 +43,7 @@ const operate = (operand1, operator, operand2) => {
 
 const clear = () => {
   reset();
-  outputElement.textContent = firstOperand;
+  outputElement.textContent = '0';
 }
 
 const getAppendedOperand = (operand, part) => {
