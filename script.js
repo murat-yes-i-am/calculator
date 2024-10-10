@@ -176,5 +176,7 @@ const calculate = () => {
 
   auxiliary.clearButton.addEventListener('click', clear);
 
-  auxiliary.changeSignButton.addEventListener('click', changeSign)
+  auxiliary.changeSignButton.addEventListener('click', changeSign);
+
+  auxiliary.percentButton.addEventListener('click', changeToPercent);
 })();
