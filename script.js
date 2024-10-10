@@ -59,16 +59,12 @@ const operate = (operand1, operator, operand2) => {
 }
 
 const changeSign = () => {
-  if (operator && secondOperand) {
-    secondOperand = '' + -secondOperand;
-  }
-
   if (!operator && result) {
     result = '' + -result;
-  }
-
-  if (!operator && firstOperand) {
+  } else if (!operator && firstOperand) {
     firstOperand = '' + -result;
+  } else if (operator && secondOperand) {
+    secondOperand = '' + -secondOperand;
   }
 
   showOutput()
