@@ -54,7 +54,7 @@ const getAppendedOperand = (operand, part) => {
   }
 }
 
-const showInput = () => {
+const showOutput = () => {
   const operandToShow = operator ? secondOperand : firstOperand;
 
   outputElement.textContent = operandToShow;
@@ -73,7 +73,7 @@ const readNumberPartInput = (e) => {
     }
 
     isDotUsed = isDot;
-    showInput();
+    showOutput();
   }
 }
 
@@ -97,7 +97,7 @@ const calculate = () => {
     secondOperand = 0;
     operator = null;
 
-    showInput();
+    showOutput();
   }
 }
 
