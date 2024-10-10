@@ -108,6 +108,15 @@ const calculate = () => {
     const operand2 = Number(secondOperand);
 
     result = '' + operate(operand1, operator, operand2);
+
+    if (result.length > 9) {
+      const [integerPart, fractionPart] = result.split('.');
+      const freeSpace = 9 - integerPart.length;
+      const newFractionSpace = freeSpace > 0 ? freeSpace : 0;
+
+      result = +((+result.slice(0, 10)).toFixed(newFractionSpace));
+    }
+
     firstOperand = '';
     secondOperand = '';
     operator = null;
