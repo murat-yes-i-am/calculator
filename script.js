@@ -87,8 +87,6 @@ const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
   if (operator) {
-    firstOperand = result;
-    result = null;
     calculate();
   }
 
@@ -97,6 +95,10 @@ const readOperator = (e) => {
 }
 
 const calculate = () => {
+  if (result) {
+    firstOperand = result;
+  }
+  
   if (firstOperand && operator && secondOperand) {
     const operand1 = Number(firstOperand);
     const operand2 = Number(secondOperand);
@@ -105,6 +107,7 @@ const calculate = () => {
     firstOperand = 0;
     secondOperand = 0;
     operator = null;
+    isDotUsed = false;
 
     showOutput();
   }
