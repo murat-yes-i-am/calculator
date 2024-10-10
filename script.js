@@ -45,13 +45,15 @@ const showOutput = () => {
   outputElement.textContent = toShow;
 }
 
+const getOpposite = (number) => '' + -number;
+
 const changeSign = () => {
   if (!operator && result) {
-    result = '' + -result;
+    result = getOpposite(result);
   } else if (!operator && firstOperand) {
-    firstOperand = '' + -firstOperand;
+    firstOperand = getOpposite(firstOperand);
   } else if (operator && secondOperand) {
-    secondOperand = '' + -secondOperand;
+    secondOperand = getOpposite(secondOperand);
   }
 
   showOutput()
