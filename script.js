@@ -1,3 +1,5 @@
+const MAX_LENGTH = 9;
+
 const numberPartButtons = [...document.querySelectorAll('.button.number-part')];
 const operatorUI = {
   addButton: document.getElementById('add'),
@@ -109,12 +111,12 @@ const calculate = () => {
 
     result = '' + operate(operand1, operator, operand2);
 
-    if (result.length > 9) {
+    if (result.length > MAX_LENGTH) {
       const [integerPart, fractionPart] = result.split('.');
-      const freeSpace = 9 - integerPart.length;
+      const freeSpace = MAX_LENGTH - integerPart.length;
       const newFractionSpace = freeSpace > 0 ? freeSpace : 0;
 
-      result = +((+result.slice(0, 9)).toFixed(newFractionSpace));
+      result = +((+result.slice(0, MAX_LENGTH)).toFixed(newFractionSpace));
     }
 
     firstOperand = '';
