@@ -50,6 +50,22 @@ const clear = () => {
   outputElement.textContent = '0';
 }
 
+const changeSign = () => {
+  if (operator && secondOperand) {
+    secondOperand = '' + -secondOperand;
+  }
+
+  if (!operator && result) {
+    result = '' + -result;
+  }
+
+  if (!operator && firstOperand) {
+    firstOperand = '' + -result;
+  }
+
+  showOutput()
+}
+
 const getAppendedOperand = (operand, part) => {
   if (operand === '' && part === '.') {
     return '0.';
