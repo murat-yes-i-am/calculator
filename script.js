@@ -42,7 +42,7 @@ const showOutput = () => {
     : result ? result
       : firstOperand;
 
-  outputElement.textContent = toShow;
+  outputElement.textContent = toShow.slice(0, 10);
 }
 
 const getOpposite = (number) => '' + -number;
