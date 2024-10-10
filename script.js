@@ -78,7 +78,7 @@ const readNumberPartInput = (e) => {
       secondOperand = getAppendedOperand(secondOperand, enteredPart);
     }
 
-    isDotUsed = isDot;
+    isDotUsed = isDotUsed || isDot;
     showOutput();
   }
 }
