@@ -119,7 +119,7 @@ const calculate = () => {
     result = '' + operate(operand1, operator, operand2);
 
     if (result.length > MAX_LENGTH) {
-      const [integerPart, fractionPart] = result.split('.');
+      const [integerPart] = result.split('.');
       const freeSpace = MAX_LENGTH - integerPart.length;
       const newFractionSpace = freeSpace > 0 ? freeSpace : 0;
 
