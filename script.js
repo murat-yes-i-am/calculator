@@ -159,4 +159,6 @@ const calculate = () => {
   equalsButton.addEventListener('click', calculate);
 
   auxiliary.clearButton.addEventListener('click', clear);
+
+  auxiliary.changeSignButton.addEventListener('click', changeSign)
 })();
