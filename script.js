@@ -55,7 +55,9 @@ const getAppendedOperand = (operand, part) => {
 }
 
 const showOutput = () => {
-  const operandToShow = operator ? secondOperand : firstOperand;
+  const operandToShow = result ? result
+  : operator ? secondOperand
+  : firstOperand;
 
   outputElement.textContent = operandToShow;
 }
