@@ -95,7 +95,8 @@ const calculate = () => {
     const operand1 = Number(firstOperand);
     const operand2 = Number(secondOperand);
 
-    firstOperand = operate(operand1, operator, operand2);
+    result = operate(operand1, operator, operand2);
+    firstOperand = 0;
     secondOperand = 0;
     operator = null;
 
