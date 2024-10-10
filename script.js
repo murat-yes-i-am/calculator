@@ -114,7 +114,7 @@ const calculate = () => {
       const freeSpace = 9 - integerPart.length;
       const newFractionSpace = freeSpace > 0 ? freeSpace : 0;
 
-      result = +((+result.slice(0, 10)).toFixed(newFractionSpace));
+      result = +((+result.slice(0, 9)).toFixed(newFractionSpace));
     }
 
     firstOperand = '';
