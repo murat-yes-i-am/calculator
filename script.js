@@ -56,7 +56,21 @@ const changeSign = () => {
     secondOperand = getOpposite(secondOperand);
   }
 
-  showOutput()
+  showOutput();
+}
+
+const getPercent = (number) => '' + (number / 100);
+
+const changeToPercent = () => {
+  if (!operator && result) {
+    result = getPercent(result);
+  } else if (!operator && firstOperand) {
+    firstOperand = getPercent(firstOperand);
+  } else if (operator && secondOperand) {
+    secondOperand = getPercent(secondOperand);
+  }
+
+  showOutput();
 }
 
 const operate = (operand1, operator, operand2) => {
