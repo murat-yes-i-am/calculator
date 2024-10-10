@@ -157,14 +157,7 @@ const calculate = () => {
     const operand2 = Number(secondOperand);
 
     result = '' + operate(operand1, operator, operand2);
-
-    if (result.length > MAX_LENGTH) {
-      const [integerPart] = result.split('.');
-      const freeSpace = MAX_LENGTH - integerPart.length;
-      const newFractionSpace = freeSpace > 0 ? freeSpace : 0;
-
-      result = +((+result.slice(0, MAX_LENGTH)).toFixed(newFractionSpace));
-    }
+    result = shorten(result);
 
     firstOperand = '';
     secondOperand = '';
