@@ -16,12 +16,14 @@ const outputElement = document.querySelector('.output');
 
 let firstOperand = 0;
 let secondOperand = 0;
+let result = null;
 let operator = null;
 let isDotUsed = false;
 
 const reset = () => {
   firstOperand = 0;
   secondOperand = 0;
+  result = null;
   operator = null;
   isDotUsed = false;
 }
