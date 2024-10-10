@@ -21,6 +21,7 @@ let secondOperand = '';
 let result = null;
 let operator = null;
 let isDotUsed = false;
+let currentInputLength = 0;
 
 const reset = () => {
   firstOperand = '';
@@ -28,6 +29,7 @@ const reset = () => {
   result = null;
   operator = null;
   isDotUsed = false;
+  currentInputLength = 0;
 }
 
 const operate = (operand1, operator, operand2) => {
@@ -62,30 +64,34 @@ const getAppendedOperand = (operand, part) => {
 
 const showOutput = () => {
   const toShow = operator ? secondOperand
-  : result ? result
-  : firstOperand;
+    : result ? result
+      : firstOperand;
 
   outputElement.textContent = toShow;
 }
 
 const readNumberPartInput = (e) => {
-  const enteredPart = e.target.textContent;
-  const isDot = enteredPart === '.';
-  const isDigit = !isDot;
+  if (currentInputLength < MAX_LENGTH) {
+    const enteredPart = e.target.textContent;
+    const isDot = enteredPart === '.';
+    const isDigit = !isDot;
 
-  if (result && !operator) {
-    result = null;
-  }
-
-  if ((isDot && !isDotUsed) || isDigit) {
-    if (!operator) {
-      firstOperand = getAppendedOperand(firstOperand, enteredPart);
-    } else {
-      secondOperand = getAppendedOperand(secondOperand, enteredPart);
+    if (result && !operator) {
+      result = null;
     }
 
-    isDotUsed = isDotUsed || isDot;
-    showOutput();
+    if ((isDot && !isDotUsed) || isDigit) {
+      if (!operator) {
+        firstOperand = getAppendedOperand(firstOperand, enteredPart);
+        currentInputLength = firstOperand.length;
+      } else {
+        secondOperand = getAppendedOperand(secondOperand, enteredPart);
+        currentInputLength = secondOperand.length;
+      }
+
+      isDotUsed = isDotUsed || isDot;
+      showOutput();
+    }
   }
 }
 
@@ -98,6 +104,7 @@ const readOperator = (e) => {
 
   operator = enteredOperator;
   isDotUsed = false;
+  currentInputLength = 0;
 }
 
 const calculate = () => {
@@ -132,12 +139,12 @@ const calculate = () => {
   for (const button of numberPartButtons) {
     button.addEventListener('click', readNumberPartInput);
   }
-  
+
   for (const button in operatorUI) {
     operatorUI[button].addEventListener('click', readOperator);
   }
-  
+
   equalsButton.addEventListener('click', calculate);
-  
+
   auxiliary.clearButton.addEventListener('click', clear);
 })();
