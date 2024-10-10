@@ -59,11 +59,11 @@ const getAppendedOperand = (operand, part) => {
 }
 
 const showOutput = () => {
-  const operandToShow = operator ? secondOperand
+  const toShow = operator ? secondOperand
   : result ? result
   : firstOperand;
 
-  outputElement.textContent = operandToShow;
+  outputElement.textContent = toShow;
 }
 
 const readNumberPartInput = (e) => {
