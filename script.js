@@ -135,6 +135,18 @@ const readOperator = (e) => {
   currentInputLength = 0;
 }
 
+const shorten = (numberString) => {
+  if (numberString.length > MAX_LENGTH) {
+    const [integerPart] = numberString.split('.');
+    const freeSpace = MAX_LENGTH - integerPart.length;
+    const newFractionSpace = freeSpace > 0 ? freeSpace : 0;
+
+    return +((+numberString.slice(0, MAX_LENGTH)).toFixed(newFractionSpace));
+  }
+
+  return numberString;
+}
+
 const calculate = () => {
   if (result) {
     firstOperand = result;
