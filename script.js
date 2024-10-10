@@ -83,6 +83,8 @@ const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
   if (operator) {
+    firstOperand = result;
+    result = null;
     calculate();
   }
 
