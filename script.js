@@ -14,15 +14,15 @@ const auxiliary = {
 }
 const outputElement = document.querySelector('.output');
 
-let firstOperand = 0;
-let secondOperand = 0;
+let firstOperand = '';
+let secondOperand = '';
 let result = null;
 let operator = null;
 let isDotUsed = false;
 
 const reset = () => {
-  firstOperand = 0;
-  secondOperand = 0;
+  firstOperand = '';
+  secondOperand = '';
   result = null;
   operator = null;
   isDotUsed = false;
@@ -47,11 +47,15 @@ const clear = () => {
 }
 
 const getAppendedOperand = (operand, part) => {
-  if (operand !== 0 || part === '.') {
-    return operand + part;
-  } else {
-    return part !== '0' ? part : operand;
+  if (operand === '' && part === '.') {
+    return '0.';
   }
+
+  if (operand === '0' && part !== '.') {
+    return part;
+  }
+
+  return operand + part;
 }
 
 const showOutput = () => {
@@ -104,8 +108,8 @@ const calculate = () => {
     const operand2 = Number(secondOperand);
 
     result = operate(operand1, operator, operand2);
-    firstOperand = 0;
-    secondOperand = 0;
+    firstOperand = '';
+    secondOperand = '';
     operator = null;
     isDotUsed = false;
 
