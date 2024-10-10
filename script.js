@@ -62,7 +62,7 @@ const changeSign = () => {
   if (!operator && result) {
     result = '' + -result;
   } else if (!operator && firstOperand) {
-    firstOperand = '' + -result;
+    firstOperand = '' + -firstOperand;
   } else if (operator && secondOperand) {
     secondOperand = '' + -secondOperand;
   }
