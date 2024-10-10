@@ -11,8 +11,8 @@ const equalsButton = document.getElementById('equals');
 
 const auxiliary = {
   clearButton: document.getElementById('clear'),
-  changeSignButton: document.getElementById('percent'),
-  percentButton: document.getElementById('change-sign'),
+  changeSignButton: document.getElementById('change-sign'),
+  percentButton: document.getElementById('percent'),
 }
 const outputElement = document.querySelector('.output');
 
