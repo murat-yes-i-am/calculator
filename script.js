@@ -45,6 +45,18 @@ const showOutput = () => {
   outputElement.textContent = toShow;
 }
 
+const changeSign = () => {
+  if (!operator && result) {
+    result = '' + -result;
+  } else if (!operator && firstOperand) {
+    firstOperand = '' + -firstOperand;
+  } else if (operator && secondOperand) {
+    secondOperand = '' + -secondOperand;
+  }
+
+  showOutput()
+}
+
 const operate = (operand1, operator, operand2) => {
   switch (operator) {
     case '+':
@@ -56,18 +68,6 @@ const operate = (operand1, operator, operand2) => {
     case '/':
       return operand1 / operand2;
   }
-}
-
-const changeSign = () => {
-  if (!operator && result) {
-    result = '' + -result;
-  } else if (!operator && firstOperand) {
-    firstOperand = '' + -firstOperand;
-  } else if (operator && secondOperand) {
-    secondOperand = '' + -secondOperand;
-  }
-
-  showOutput()
 }
 
 const getAppendedOperand = (operand, part) => {
