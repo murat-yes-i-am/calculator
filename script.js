@@ -32,6 +32,19 @@ const reset = () => {
   currentInputLength = 0;
 }
 
+const clear = () => {
+  reset();
+  outputElement.textContent = '0';
+}
+
+const showOutput = () => {
+  const toShow = operator ? secondOperand
+    : result ? result
+      : firstOperand;
+
+  outputElement.textContent = toShow;
+}
+
 const operate = (operand1, operator, operand2) => {
   switch (operator) {
     case '+':
@@ -43,11 +56,6 @@ const operate = (operand1, operator, operand2) => {
     case '/':
       return operand1 / operand2;
   }
-}
-
-const clear = () => {
-  reset();
-  outputElement.textContent = '0';
 }
 
 const changeSign = () => {
@@ -76,14 +84,6 @@ const getAppendedOperand = (operand, part) => {
   }
 
   return operand + part;
-}
-
-const showOutput = () => {
-  const toShow = operator ? secondOperand
-    : result ? result
-      : firstOperand;
-
-  outputElement.textContent = toShow;
 }
 
 const readNumberPartInput = (e) => {
