@@ -159,13 +159,17 @@ const calculate = () => {
   }
 }
 
+const isNumberPart = (key) => {
+  return '1234567890.'.includes(key);
+}
+
 const readKey = (e) => {
   const { key } = e;
 }
 
 (function addEventListeners() {
   document.body.addEventListener('keydown', readKey);
-  
+
   for (const button of numberPartButtons) {
     button.addEventListener('click', readNumberPartInput);
   }
