@@ -44,7 +44,6 @@ body {
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: var(--buttons-gap);
 }
 
@@ -54,8 +53,10 @@ body {
   padding: 20px;
   width: var(--button-width);
   font-size: 36px;
+  flex-grow: 1;
 }
 
 .button.double {
   width: calc(var(--button-width) * 2 + var(--buttons-gap));
+  flex-grow: 2;
 }
