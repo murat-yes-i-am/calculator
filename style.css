@@ -68,6 +68,10 @@ h1 {
   flex-grow: 1;
 }
 
+.button:active {
+  opacity: 0.8;
+}
+
 .button.double {
   width: calc(var(--button-width) * 2 + var(--buttons-gap));
   flex-grow: 2;
