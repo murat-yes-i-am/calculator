@@ -159,6 +159,10 @@ const calculate = () => {
   }
 }
 
+const readKey = (e) => {
+  const { key } = e;
+}
+
 (function addEventListeners() {
   for (const button of numberPartButtons) {
     button.addEventListener('click', readNumberPartInput);
