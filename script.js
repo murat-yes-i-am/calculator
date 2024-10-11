@@ -187,6 +187,9 @@ const calculate = () => {
     isDotUsed = false;
 
     showOutput();
+  } else {
+    unsetOperatorSelected(operator);
+    operator = null;
   }
 }
 
