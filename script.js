@@ -174,6 +174,7 @@ const calculate = () => {
     const operand2 = Number(secondOperand);
 
     result = '' + operate(operand1, operator, operand2);
+    unsetOperatorSelected(operator);
 
     firstOperand = '';
     secondOperand = '';
