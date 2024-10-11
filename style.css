@@ -56,5 +56,5 @@ body {
 }
 
 .button#equals {
-  width: calc(var(--button-width) * 2);
+  width: calc(var(--button-width) * 2 + var(--buttons-gap));
 }
