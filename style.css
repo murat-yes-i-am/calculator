@@ -73,3 +73,7 @@ body {
 .number-part {
   background-color: var(--number-part-button-color);
 }
+
+.operator {
+  background-color: var(--operator-button-color);
+}
