@@ -19,6 +19,7 @@
 
 body {
   min-height: 100vh;
+  background-color: aliceblue;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
