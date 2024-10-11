@@ -53,3 +53,7 @@ body {
   width: var(--button-width);
   font-size: 36px;
 }
+
+.button#equals {
+  width: calc(var(--button-width) * 2);
+}
