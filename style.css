@@ -7,10 +7,9 @@
 :root {
   --calculator-width: 500px;
   --calculator-padding: 10px;
-  --button-border-width: 2px;
-  --button-available-width: calc((var(--calculator-width) - 2 * var(--calculator-padding)) / 4);
-  --button-width: calc(var(--button-available-width) - 2 * var(--button-border-width));
   --buttons-gap: 2px;
+  --button-available-width: calc((var(--calculator-width) - 2 * var(--calculator-padding)) / 4);
+  --button-width: calc(var(--button-available-width) - 3 * var(--buttons-gap));
 }
 
 body {
