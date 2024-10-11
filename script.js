@@ -169,6 +169,15 @@ const isOperator = (key) => {
 
 const readKey = (e) => {
   const { key } = e;
+
+  switch (true) {
+    case isNumberPart(key):
+      readNumberPartInput({ target: { textContent: key } });
+      break;
+    case isOperator(key):
+      readOperator({ target: { textContent: key } });
+      break;
+  }
 }
 
 (function addEventListeners() {
