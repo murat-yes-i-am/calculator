@@ -9,6 +9,7 @@
   --calculator-padding: 10px;
   --button-border-width: 2px;
   --button-available-width: calc((var(--calculator-width) - 2 * var(--calculator-padding)) / 4);
+  --button-width: calc(var(--button-available-width) - 2 * var(--button-border-width));
 }
 
 body {
@@ -26,7 +27,6 @@ body {
   border: 2px solid black;
   border-radius: 10px;
   padding: var(--calculator-padding);
-  --button-width: calc(var(--button-available-width) - 2 * var(--button-border-width));
 }
 
 .output {
