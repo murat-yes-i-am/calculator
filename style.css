@@ -12,7 +12,7 @@
   --button-width: calc(var(--button-available-width) - 3 * var(--buttons-gap));
   --calculator-color: gray;
   --auxiliary-button-color: rgb(71, 122, 250);
-  --number-part-button-color: green;
+  --number-part-button-color: rgb(23, 137, 57);
   --operator-button-color: rgb(255, 149, 0);
 }
 
