@@ -50,7 +50,8 @@ body {
 }
 
 .button {
-  border: var(--button-border-width) solid black;
+  border: none;
+  border-radius: 5px;
   padding: 20px;
   width: var(--button-width);
   font-size: 36px;
