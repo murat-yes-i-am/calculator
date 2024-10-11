@@ -164,6 +164,8 @@ const readKey = (e) => {
 }
 
 (function addEventListeners() {
+  document.body.addEventListener('keydown', readKey);
+  
   for (const button of numberPartButtons) {
     button.addEventListener('click', readNumberPartInput);
   }
