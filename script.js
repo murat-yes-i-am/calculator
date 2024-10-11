@@ -159,13 +159,9 @@ const calculate = () => {
   }
 }
 
-const isNumberPart = (key) => {
-  return '1234567890.'.includes(key);
-}
+const isNumberPart = (key) => '1234567890.'.includes(key);
 
-const isOperator = (key) => {
-  return '+-*/='.includes(key) || key === 'Enter';
-}
+const isOperator = (key) => '+-*/='.includes(key) || key === 'Enter';
 
 const isEscape = (key) => key === 'Escape';
 
