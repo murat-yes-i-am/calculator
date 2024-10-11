@@ -164,7 +164,7 @@ const isNumberPart = (key) => {
 }
 
 const isOperator = (key) => {
-  return '+-*/='.includes(key);
+  return '+-*/='.includes(key) || key === 'Enter';
 }
 
 const readKey = (e) => {
