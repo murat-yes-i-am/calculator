@@ -144,12 +144,18 @@ const getOperatorElement = (operator) => {
 
 const setOperatorSelected = (operator) => {
   const operatorElement = getOperatorElement(operator);
-  operatorElement.classList.add('selected');
+
+  if (operatorElement) {
+    operatorElement.classList.add('selected');
+  }
 }
 
 const unsetOperatorSelected = (operator) => {
   const operatorElement = getOperatorElement(operator);
-  operatorElement.classList.remove('selected');
+
+  if (operatorElement) {
+    operatorElement.classList.remove('selected');
+  }
 }
 
 const readOperator = (e) => {
