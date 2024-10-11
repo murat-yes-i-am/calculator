@@ -54,6 +54,8 @@ const changeSign = () => {
     firstOperand = getOpposite(firstOperand);
   } else if (operator && secondOperand) {
     secondOperand = getOpposite(secondOperand);
+  } else {
+    firstOperand = '0';
   }
 
   showOutput();
@@ -68,6 +70,8 @@ const changeToPercent = () => {
     firstOperand = getPercent(firstOperand);
   } else if (operator && secondOperand) {
     secondOperand = getPercent(secondOperand);
+  } else {
+    firstOperand = '0';
   }
 
   showOutput();
