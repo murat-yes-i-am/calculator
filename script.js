@@ -167,6 +167,8 @@ const isOperator = (key) => {
   return '+-*/='.includes(key) || key === 'Enter';
 }
 
+const isEscape = (key) => key === 'Escape';
+
 const readKey = (e) => {
   const { key } = e;
 
@@ -176,6 +178,9 @@ const readKey = (e) => {
       break;
     case isOperator(key):
       readOperator({ target: { textContent: key } });
+      break;
+    case isEscape(key):
+      clear();
       break;
   }
 }
