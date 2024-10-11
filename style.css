@@ -7,6 +7,7 @@
 :root {
   --calculator-width: 500px;
   --calculator-padding: 10px;
+  --button-border-width: 2px;
 }
 
 body {
@@ -45,6 +46,7 @@ body {
 }
 
 .button {
+  border: var(--button-border-width) solid black;
   padding: 20px;
   width: var(--button-width);
   height: var(--button-height);
