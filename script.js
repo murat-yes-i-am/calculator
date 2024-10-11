@@ -163,6 +163,10 @@ const isNumberPart = (key) => {
   return '1234567890.'.includes(key);
 }
 
+const isOperator = (key) => {
+  return '+-*/='.includes(key);
+}
+
 const readKey = (e) => {
   const { key } = e;
 }
