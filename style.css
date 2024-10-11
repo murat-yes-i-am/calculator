@@ -65,3 +65,11 @@ body {
   width: calc(var(--button-width) * 2 + var(--buttons-gap));
   flex-grow: 2;
 }
+
+.auxiliary {
+  background-color: var(--auxiliary-button-color);
+}
+
+.number-part {
+  background-color: var(--number-part-button-color);
+}
