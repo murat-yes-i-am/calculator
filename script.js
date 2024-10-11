@@ -126,6 +126,10 @@ const readNumberPartInput = (e) => {
 const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
+  if (!firstOperand && !result) {
+    firstOperand = '0';
+  }
+
   if (operator) {
     calculate();
   }
