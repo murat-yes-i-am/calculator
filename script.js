@@ -138,6 +138,16 @@ const getOperatorElement = (operator) => {
   }
 }
 
+const setOperatorSelected = (operator) => {
+  const operatorElement = getOperatorElement(operator);
+  operatorElement.classList.add('selected');
+}
+
+const unsetOperatorSelected = (operator) => {
+  const operatorElement = getOperatorElement(operator);
+  operatorElement.classList.remove('selected');
+}
+
 const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
