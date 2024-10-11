@@ -160,6 +160,7 @@ const readOperator = (e) => {
   }
 
   operator = enteredOperator;
+  setOperatorSelected(operator);
   isDotUsed = false;
   currentInputLength = 0;
 }
