@@ -88,3 +88,7 @@ h1 {
 .operator {
   background-color: var(--operator-button-color);
 }
+
+.operator.selected {
+  
+}
