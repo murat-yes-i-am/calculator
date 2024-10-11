@@ -27,6 +27,10 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-size: 60px;
+}
+
 .calculator {
   width: var(--calculator-width);
   margin: 40px auto;
