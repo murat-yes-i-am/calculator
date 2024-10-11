@@ -10,6 +10,9 @@
   --buttons-gap: 2px;
   --button-available-width: calc((var(--calculator-width) - 2 * var(--calculator-padding)) / 4);
   --button-width: calc(var(--button-available-width) - 3 * var(--buttons-gap));
+  --auxiliary-button-color: blue;
+  --number-part-button-color: green;
+  --operator-button-color: orange;
 }
 
 body {
