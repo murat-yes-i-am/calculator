@@ -123,6 +123,21 @@ const readNumberPartInput = (e) => {
   }
 }
 
+const getOperatorElement = (operator) => {
+  switch (operator) {
+    case '+':
+      return operatorUI.addButton;
+    case '-':
+      return operatorUI.subtractButton;
+    case '*':
+      return operatorUI.multiplyButton;
+    case '/':
+      return operatorUI.divideButton;
+    default:
+      return null;
+  }
+}
+
 const readOperator = (e) => {
   const enteredOperator = e.target.textContent;
 
