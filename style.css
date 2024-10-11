@@ -50,6 +50,5 @@ body {
   border: var(--button-border-width) solid black;
   padding: 20px;
   width: var(--button-width);
-  height: var(--button-height);
   font-size: 36px;
 }
